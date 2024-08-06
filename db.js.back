@@ -1,0 +1,16 @@
+// backend/db.js
+const mysql = require('mysql2');
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'bilal',
+  password: 'Switch@123',
+  database: 'learningapp'
+});
+
+connection.connect((err) => {
+  if (err) console.log("Error in creating DB connection");
+  console.log('Connected to database');
+});
+
+module.exports = connection;
